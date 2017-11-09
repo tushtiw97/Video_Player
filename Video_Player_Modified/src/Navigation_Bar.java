@@ -57,6 +57,7 @@ public class Navigation_Bar extends HBox{
             play.setPrefWidth(30);
             play.setStyle("-fx-background-color: transparent;");
             play.setGraphic(new ImageView(imgPause));
+            play.setText("Pause/Stop");
             volume.setGraphic(new ImageView(imgVolume));
 
 
@@ -77,10 +78,11 @@ public class Navigation_Bar extends HBox{
                         if (newPlayer.getCurrentTime().greaterThanOrEqualTo(newPlayer.getTotalDuration())) {
                             newPlayer.seek(newPlayer.getStartTime());
                             play.setGraphic(new ImageView(imgPause));
+                            play.setText("Pause/Stop");
                             newPlayer.play();
                         } else {
                             newPlayer.pause();
-                            play.setText("");
+                            play.setText("Play");
                             play.setGraphic(new ImageView(imgPlay));
 
                         }

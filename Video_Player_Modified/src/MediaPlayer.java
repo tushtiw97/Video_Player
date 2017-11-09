@@ -41,8 +41,13 @@ public class MediaPlayer extends Application {
 
         primaryStage.centerOnScreen();
         primaryStage.setMinWidth(700);
-        //playlist[0]=new File("/media/tushtiw97/Movies, PC Apps & more/Movies/Gangs Of Wasseypur (2012)/Gangs Of Wasseypur 2012 Hindi BRRip 720p x264 AAC 5.1...Hon3y.mp4").toURI().toString();
-        playlist[0]=new File(setUp()).toURI().toString();
+        playlist[0] = "null";
+        while (playlist[0].endsWith("null") || !playlist[0].endsWith("mp4")){
+            playlist[0] = new File(setUp()).toURI().toString();
+            if(playlist[0].endsWith("null") || !playlist[0].endsWith("mp4"))
+                JOptionPane.showMessageDialog(null, "Please select .mp4 file only", "InfoBox: " + "Invalid Selection", JOptionPane.INFORMATION_MESSAGE);
+        }
+
         MenuItem open = new MenuItem("Open");
         Menu File = new Menu("File");
         Menu Playlist = new Menu("Playlist");

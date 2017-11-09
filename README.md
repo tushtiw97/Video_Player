@@ -7,4 +7,4 @@ This repo has two folders. The first one was for testing purposes, where I had s
 
 The second folder contains the actual project where. before playing any default video, the users will be asked to select their desired video to be played
 
-More improvements coming soon!
+More improvements coming soon!!
